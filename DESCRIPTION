@@ -1,0 +1,16 @@
+Package: s2fa
+Title: Factor Analysis (FA), Simple Supervised FA (S2FA), Simple Semi-Supervised FA (S3FA), Missing S3FA (MS3FA) 
+Version: 1.0.0.0
+Authors@R: person("Sebastian", "Ciobanu", email = "aciobanusebi@gmail.com", role = c("aut", "cre"))
+Description: Factor Analysis is used for dimensionality reduction, an unsupervised task. With some changes, Factor Analysis (FA) can be also be used for [supervised] single-output/multi-output regression (S2FA), for semi-supervised single-output/multi-output regression (S3FA) and for imputing missing values in input or output (MS3FA). In the training phase, S2FA uses an analytic solution in matrix form, S3FA uses the EM algorithm in matrix form, and MS3FA uses the EM algorithm. For the same task, MS3FA would be slower than FA, S2FA, and S3FA. MS3FA can be used to learn a model with missing data and to impute missing values. House data source: 'Long-Kogan Realty, Chicago, USA'
+Depends: R (>= 3.4.4)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+	matrixcalc,
+    rgl,
+    clusterGeneration,
+    turboEM,
+    mvtnorm
+RoxygenNote: 6.1.1
