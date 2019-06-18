@@ -64,6 +64,10 @@ mS3faFit <- function(trainInput,
     stop("stopType must be 'parameter' or 'objfn'")
   }
 
+  if(is.matrix(trainInput) && nrow(trainInput) == 1) {
+    stop("cannot learn with only one instance")
+  }
+
   fixptfn <- function(params) {
     if(!(any(is.na(turboEmMethods)) || is.null(turboEmMethods))) {
       params <- getParamsFromVector(params,type,ncol(trainInput),ncol(trainOutput))

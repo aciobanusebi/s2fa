@@ -85,6 +85,10 @@ s3faFit <- function(X_t_supervised, Z_t_supervised, X_t_unsupervised,
     stop("stopType must be 'parameter' or 'objfn'")
   }
 
+  if(is.matrix(X_t_supervised) && nrow(X_t_supervised) == 1) {
+    stop("cannot learn with only one supervised instance")
+  }
+
   fixptfn <- function(params) {
     if(!(any(is.na(turboEmMethods)) || is.null(turboEmMethods))) {
       params <- getParamsFromVector(params,type,ncol(X_t_supervised),ncol(Z_t_supervised))

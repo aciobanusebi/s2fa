@@ -82,6 +82,10 @@ faFit <- function(X_t_unsupervised,paramsNULL_nDimZ,
     stop("stopType must be 'parameter' or 'objfn'")
   }
 
+  if(is.matrix(X_t_unsupervised) && nrow(X_t_unsupervised) == 1) {
+    stop("cannot learn with only one instance")
+  }
+
   nDimZ <- params$nDimZ
 
   fixptfn <- function(params) {

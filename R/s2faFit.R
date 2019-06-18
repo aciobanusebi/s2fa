@@ -26,6 +26,9 @@ s2faFit <- function(X_t, Z_t,
   if(checkArgs) {
     s2faFitCheckArgs(X_t, Z_t, type, lambdaRidge)
   }
+  if(is.matrix(X_t) && nrow(X_t) == 1) {
+    stop("cannot learn with only one instance")
+  }
 
   type <- tolower(type)
 
