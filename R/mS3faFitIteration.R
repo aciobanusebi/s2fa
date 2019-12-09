@@ -58,8 +58,6 @@ mS3faFitIteration <- function(trainInput, trainOutput, params, type="fa", withCo
     psi <- diag(nDimTrain) * nu
   }
 
-  print("LOCAL")
-
   list(
     mu_z=mu_z,
     Sigma_z=Sigma_z,
