@@ -10,3 +10,5 @@ The R package can be installed via:
 ```
 devtools::install_github("aciobanusebi/s2fa")
 ```
+
+More info on the algorithms: https://github.com/aciobanusebi/msc_dissertation
