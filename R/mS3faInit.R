@@ -59,8 +59,8 @@ mS3faInit <- function(trainInput,trainOutput,type="fa") {
   if(nCount == 0) {
     mu <- convertToColumnVector(runif(nDimX))
     psi <- matrix(nrow=nDimX,ncol=nDimX)
-    for(i in 1:nDimZ) {
-      for(j in i:nDimZ) {
+    for(i in 1:nDimX) {
+      for(j in i:nDimX) {
         psi[i,j] <- runif(1)
         psi[j,i] <- psi[i,j]
       }
