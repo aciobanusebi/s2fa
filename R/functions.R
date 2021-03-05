@@ -82,6 +82,8 @@ getConditionalDistribution <- function(x,mu,Sigma,frontIndexes) {
   Sigma_b <- Sigma[-frontIndexes,-frontIndexes,drop=FALSE]
   Sigma_c <- Sigma[frontIndexes,-frontIndexes,drop=FALSE]
 
+  print(Sigma_b)
+  print(dim(Sigma_b))
   mu_a_hat <- mu_a + Sigma_c %*% solve(Sigma_b) %*% (x_b - mu_b)
   Sigma_a_hat <- Sigma_a - Sigma_c %*% solve(Sigma_b) %*% t(Sigma_c)
 
