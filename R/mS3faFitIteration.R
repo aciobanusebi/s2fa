@@ -35,7 +35,6 @@ mS3faFitIteration <- function(trainInput, trainOutput, params, type="fa", withCo
   mu_x <- E_x_sum/nTrain
 
   lambdaRight <- E_zz_sum + lambdaRidge * diag(ncol(trainOutput))
-  print(nTrain * mu_z %*% t(mu_z) - lambdaRight)
   lambda <- (nTrain * mu_x %*% t(mu_z) - E_xz_sum) %*% solve(nTrain * mu_z %*% t(mu_z) - lambdaRight)
 
   mu <- mu_x - lambda %*% mu_z
