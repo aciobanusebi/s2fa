@@ -1,4 +1,7 @@
 # s2fa
+
+https://www.mdpi.com/1099-4300/23/8/1012
+
 Simple-Supervised Factor Analysis - an R package
 
 **Factor Analysis** is used for *dimensionality reduction*, an *unsupervised* task. With some changes, Factor Analysis (**FA**) can be also be used for [*supervised*] single-output/multi-output regression (**S2FA**), for *semi-supervised* single-output/multi-output regression (**S3FA**) and for imputing *missing values* in input or output (**MS3FA**). 
